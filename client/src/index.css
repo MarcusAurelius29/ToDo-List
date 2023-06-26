@@ -1,0 +1,139 @@
+* {
+ border: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Fira Sans' , sans-serif; 
+}
+
+body {
+  background-color: #202b3e;
+  color: #EEE;
+}
+
+.App {
+  padding: 32px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+h4 {
+  font-size: 18px;
+  color: #61759B;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.todo {
+  position: relative;
+  background-color: #131A26;
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.todo:hover {
+  opacity: 0.8;
+}
+
+.todo .checkbox {
+  width: 20px;
+  height: 20px;
+  margin: 16px;
+  border-radius: 999px;
+  background-color: #202b3e;
+  transition: 0.4;
+}
+
+.todo.is-complete .checkbox {
+  background-color: #D81E5B;
+  background-image: linear-gradient(to bottom , #D81E5B);
+}
+
+.todo .text {
+  font-size: 20px;
+}
+
+.todo.is-complete .text {
+  text-decoration: line-through;
+}
+
+.todo .delete {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  color: #EEE;
+  background-color: #AF1d2E;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addPopup {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  font-size: 28px;
+  font-weight: 900;
+  color: #EEE;
+  background-image: linear-gradient(to bottom right , #D81e5b);
+}
+
+.closepopup {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	color: var(--dark);
+	cursor: pointer;
+}
+
+.popup h3 {
+	color: var(--dark);
+	margin-bottom: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.add-todo-input {
+	appearance: none;
+	outline: none;
+	border: none;
+	background-color: #FFF;
+	padding: 16px;
+	border-radius: 16px;
+	width: 100%;
+	box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.2);
+	font-size: 20px;
+}
+.button {
+	padding: 16px 32px;
+	border-radius: 999px;
+	background-image: linear-gradient(to right, var(--primary), var(--secondary));
+	display: inline-block;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 18px;
+	margin-top: 16px;
+	text-align: center;
+	cursor: pointer;
+}
